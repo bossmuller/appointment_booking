@@ -2,7 +2,10 @@
 <body>
 <footer class="footer">
     <div class="w-100 clearfix">
-
+        <div class="text-center p-4" style="color: #00a7e2">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="" style="color: #0c5460"> Amanihospital.com</a>
+        </div>
 
     </div>
 </footer>

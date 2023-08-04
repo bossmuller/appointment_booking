@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="row align-items-end">
             <div class="col-lg-8">
-                <div class="page-header-title">
+                <div class="page-header-title" style="color: #00a7e2">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
                         <h5>Doctor Appointments</h5>
@@ -42,11 +42,11 @@
 
             @endforeach
             {{-- Form --}}
-            <form action="{{ route('appointment.store') }}" method="post">
+            <form action="{{ route('appointment.store') }}" method="post" style="color: #00a7e2">
                 @csrf
                 <div class="card">
                     <div class="card-header">
-                        <h3>Choose A Date</h3>
+                        <h3 style="color: #00a7e2">Choose A Date</h3>
                     </div>
                     <div class="card-body">
                         <input type="text" class="form-control datetimepicker-input" id="datepicker"

@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="row align-items-end">
             <div class="col-lg-8">
-                <div class="page-header-title">
+                <div class="page-header-title" style="color: #00a7e2">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
                         <h5>Department</h5>
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <nav class="breadcrumb-container" aria-label="breadcrumb">
+                <nav class="breadcrumb-container" aria-label="breadcrumb" >
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="../index.html"><i class="ik ik-home"></i></a>
@@ -31,10 +31,10 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    <h3>Add Department</h3>
+                    <h3 style="color: #00a7e2">Add Department</h3>
                 </div>
                 <div class="card-body">
-                    <form class="forms-sample" action="{{ route('department.update', [$department->id]) }}" method="post">
+                    <form class="forms-sample" action="{{ route('department.update', [$department->id]) }}" method="post" style="color: #00a7e2">
                         @csrf
                         @method('PUT')
                         <div class="row">

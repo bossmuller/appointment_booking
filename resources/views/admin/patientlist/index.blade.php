@@ -5,10 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="color: #00a7e2">
                         Total Appointments: {{ $bookings->count() }}
                     </div>
-                    <form action="{{ route('patients') }}" method="GET">
+                    <form action="{{ route('patients') }}" method="GET" style="color: #00a7e2">
 
                         <div class="card-header">
                             Filter by Date: &nbsp;
@@ -27,7 +27,7 @@
                     </form>
 
                     <div class="card-body table-responsive-lg">
-                        <table class="table table-striped">
+                        <table class="table table-striped" style="color: #00a7e2">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -66,7 +66,7 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <td>There is no appointment on {{ $date ?? date('m-d-yy') }}</td>
+                                    <td>There is no appointment on {{ $date ?? date('m-d-Y') }}</td>
                                 @endforelse
 
                             </tbody>

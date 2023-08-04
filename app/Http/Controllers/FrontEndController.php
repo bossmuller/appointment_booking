@@ -15,15 +15,15 @@ class FrontEndController extends Controller
     public function index(Request $request)
     {
         // Set timezone
-        date_default_timezone_set('America/New_York');
+        date_default_timezone_set('Africa/Nairobi');
         // If there is set date, find the doctors
         if (request('date')) {
-            $formatDate = date('m-d-yy', strtotime(request('date')));
+            $formatDate = date('m-d-Y', strtotime(request('date')));
             $doctors = Appointment::where('date', $formatDate)->get();
             return view('welcome', compact('doctors', 'formatDate'));
         };
         // Return all doctors avalable for today to the welcome page
-        $doctors = Appointment::where('date', date('m-d-yy'))->get();
+        $doctors = Appointment::where('date', date('m-d-Y'))->get();
         return view('welcome', compact('doctors'));
     }
 

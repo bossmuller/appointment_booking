@@ -35,13 +35,13 @@
             <p class="browser-upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div class="wrapper">
-        <header class="header-top" header-theme="light">
+    <div class="wrapper" >
+        <header class="header-top" header-theme="light" >
             <div class="container-fluid">
                 <div class="d-flex justify-content-between">
                     <div class="top-menu d-flex align-items-center">
                         <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
-                        <div class="header-search">
+                        <div class="header-search" >
                             <div class="input-group">
                                 <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
                                 <input type="text" class="form-control">
@@ -54,12 +54,12 @@
                     <div class="top-menu d-flex align-items-center">
                         <div class="dropdown">
                             <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                                aria-haspopup="true" aria-expanded="false" style="color: #00a7e2">
                                 <strong>{{ strtoupper(Auth()->user()->name) }}</strong>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown" >
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();" style="color: #00a7e2">
                                     <i class="ik ik-power dropdown-icon"></i> {{ __('Logout') }}
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -74,5 +74,3 @@
             </div>
         </header>
 
-
-</div>

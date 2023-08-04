@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">My prescriptions: {{ $prescriptions->count() }}</div>
+        <div class="row justify-content-center" >
+            <div class="col-md-12" >
+                <div class="card" style="color: #00a7e2">
+                    <div class="card-header" style="color: #00a7e2">My prescriptions: {{ $prescriptions->count() }}</div>
                     <div class="card-body table-responsive-md">
-                        <table class="table table-striped">
+                        <table class="table table-striped" style="color: #00a7e2">
                             <thead>
                                 <tr>
                                     <th scope="col">Date</th>

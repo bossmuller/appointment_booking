@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="row">
             <div class="col-lg-8">
-                <div class="page-header-title">
+                <div class="page-header-title" style="color: #00a7e2">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
                         <h5>Department</h5>
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="color: #00a7e2">
         <div class="col-lg-8">
             @if (Session::has('message'))
                 <div class="alert bg-success alert-success text-white" role="alert">
@@ -37,7 +37,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>Add Department</h3>
+                    <h3 style="color: #00a7e2">Add Department</h3>
                 </div>
                 <div class="card-body">
                     <form class="forms-sample" action="{{ route('department.store') }}" method="post">@csrf

@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="page-header">
+    <div class="page-header" style="color: #00a7e2">
         <div class="row align-items-end">
             <div class="col-lg-8">
-                <div class="page-header-title">
+                <div class="page-header-title" >
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
                         <h5>Doctors</h5>
@@ -15,7 +15,7 @@
             </div>
             <div class="col-lg-4">
                 <nav class="breadcrumb-container" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
+                    <ol class="breadcrumb" >
                         <li class="breadcrumb-item">
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
@@ -36,13 +36,13 @@
             @endif
 
             <div class="card">
-                <div class="card-header">
-                    <h3>Add doctor</h3>
+                <div class="card-header" >
+                    <h3 style="color: #00a7e2">Add doctor</h3>
                 </div>
                 <div class="card-body">
                     <form class="forms-sample" action="{{ route('doctor.store') }}" method="post"
-                        enctype="multipart/form-data">@csrf
-                        <div class="row">
+                        enctype="multipart/form-data" style="color: #00a7e2">@csrf
+                        <div class="row" >
                             <div class="col-lg-6">
                                 <label for="">Full name</label>
                                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"

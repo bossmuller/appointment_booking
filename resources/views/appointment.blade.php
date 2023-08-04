@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="card">
+                <div class="card" style="color: #00a7e2">
                     <div class="card-body text-center">
                         <h4>Doctor Information</h4>
                         <img src="{{ asset('images') }}/{{ $user->image }}" width="100px" style="border-radius: 50%;" alt="">
@@ -34,7 +34,7 @@
                 @endif
 
                 <form action="{{ route('book.appointment') }}" method="post">@csrf
-                    <div class="card">
+                    <div class="card" style="color: #00a7e2">
                         <div class="card-header lead">Appointment Date: {{ $date }}</div>
                         <div class="card-body">
                             <div class="row">

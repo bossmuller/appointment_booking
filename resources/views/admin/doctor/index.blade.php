@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="page-header">
-        <div class="row align-items-end">
+        <div class="row align-items-end" style="color: #00a7e2">
             <div class="col-lg-8">
                 <div class="page-header-title">
                     <i class="ik ik-inbox bg-blue"></i>
@@ -31,15 +31,15 @@
 
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" >
             @if (Session::has('message'))
                 <div class="alert bg-success alert-success text-white text-center" role="alert">
                     {{ Session::get('message') }}
                 </div>
             @endif
             <div class="card">
-                <div class="card-body ">
-                    <table id="data_table" class="table">
+                <div class="card-body " style="color: #00a7e2">
+                    <table id="data_table" class="table" >
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -48,6 +48,7 @@
                                 <th>Address</th>
                                 <th>Phone number</th>
                                 <th>Department</th>
+                                <th>Action</th>
                                 <th class="nosort">&nbsp;</th>
                                 <th class="nosort">&nbsp;</th>
                             </tr>
@@ -69,8 +70,8 @@
                                                 <a href="#" data-toggle="modal" data-target="#exampleModal{{ $user->id }}">
                                                     <i class="btn btn-primary ik ik-eye"></i>
                                                 </a>
-                                                <a href="{{ route('doctor.edit', [$user->id]) }}"><i
-                                                        class="btn btn-warning ik ik-edit-2"></i></a>
+                                                <a href="{{ route('doctor.edit', [$user->id]) }}">
+                                                    <i class="btn btn-warning ik ik-edit-2"></i></a>
 
                                                 <a href="{{ route('doctor.show', [$user->id]) }}">
                                                     <i class="btn btn-danger ik ik-trash-2"></i>
@@ -78,6 +79,7 @@
 
                                             </div>
                                         </td>
+                                        <td></td>
                                         <td></td>
 
                                     </tr>

@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container" style="color: #00a7e2">
+        <div class="row justify-content-center" >
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">My appointments: {{ $appointments->count() }}</div>
 
                     <div class="card-body table-responsive-sm">
-                        <table class="table table-striped">
+                        <table class="table table-striped" style="color: #00a7e2">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -26,12 +27,12 @@
                                         <td>{{ $appointment->doctor->name }}</td>
                                         <td>{{ $appointment->time }}</td>
                                         <td>{{ $appointment->date }}</td>
-                                        <td>{{ $appointment->created_at->format('m-d-yy') }}</td>
+                                        <td>{{ $appointment->created_at->format('m-d-Y') }}</td>
                                         <td>
                                             @if ($appointment->status == 0)
-                                                <p>Not Visited</p>
+                                              <button  class="btn btn-danger">Not Visited</button>
                                             @else
-                                                <p>Checked-In</p>
+                                                <button  class="btn btn-success">Checked-In</button>
                                             @endif
                                         </td>
                                     </tr>

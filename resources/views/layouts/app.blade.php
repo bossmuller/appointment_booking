@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Amani Hospital') }}</title>
+    <title>Online Hospital Appointment System</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,12 +21,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<body >
+    <div id="app backgroundImage">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Amani Hospital') }}
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: #00a7e2">
+                   Amani Hospital
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -45,34 +45,34 @@
                         <!-- Authentication Links -->
                         @if (auth()->check() && auth()->user()->role->name === 'patient')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('my.booking') }}">{{ __('Appointments') }}</a>
+                                <a class="nav-link" href="{{ route('my.booking') }}" style="color: #00a7e2">{{ __('Appointments') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('my.prescription') }}">{{ __('Prescriptions') }}</a>
+                                <a class="nav-link" href="{{ route('my.prescription') }}" style="color: #00a7e2">{{ __('Prescriptions') }}</a>
                             </li>
                         @endif
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}" style="color: #00a7e2">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}" style="color: #00a7e2">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown" >
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: #00a7e2">
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                    <a class="dropdown-item" href="{{ route('profile') }}" style="color: #00a7e2">
                                         {{ __('Profile') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();">
+                                                                    document.getElementById('logout-form').submit();" style="color: #00a7e2">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -90,6 +90,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+
     </div>
 </body>
 

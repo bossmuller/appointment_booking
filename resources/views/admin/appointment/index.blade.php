@@ -7,16 +7,16 @@
             <div class="col-lg-8">
 
 
-                <div class="page-header-title">
+                <div class="page-header-title" style="color: #00a7e2">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Doctors</h5>
+                        <h5 style="color: #00a7e2">Doctors</h5>
                         <span>Available time</span>
 
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="color: #00a7e2">
                 <nav class="breadcrumb-container" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -31,7 +31,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-10" >
             @if (Session::has('message'))
                 <div class="alert bg-success alert-success text-white" role="alert">
                     {{ Session::get('message') }}
@@ -51,7 +51,7 @@
             @endforeach
 
 
-            <form action="{{ route('appointment.check') }}" method="post">
+            <form action="{{ route('appointment.check') }}" method="post" style="color: #00a7e2">
                 @csrf
 
                 <div class="card">
@@ -73,7 +73,7 @@
                 </div>
             </form>
             @if (Route::is('appointment.check'))
-                <form action="{{ route('update') }}" method="post">
+                <form action="{{ route('update') }}" method="post" style="color: #00a7e2">
                     @csrf
 
                     <div class="card">
@@ -160,11 +160,11 @@
     </div>
 
     <div class="card">
-        <div class="card-header">
+        <div class="card-header" style="color: #00a7e2">
             Choose PM time
         </div>
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-striped" style="color: #00a7e2">
                 <tbody>
                     <tr>
                         <th scope="row">7</th>
@@ -273,7 +273,7 @@
     </form>
     {{-- Show app list --}}
 @else
-    <table class="table table-striped">
+    <table class="table table-striped" style="color: #00a7e2">
         <thead>
             <tr>
                 <th scope="col">#</th>

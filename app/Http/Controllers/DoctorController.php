@@ -131,7 +131,7 @@ class DoctorController extends Controller
             'address' => 'required',
             'department' => 'required',
             'phone_number' => 'required|numeric',
-            'image' => 'required|mimes:jpeg,jpg,png',
+            'image' => '|mimes:jpeg,jpg,png',
             'role_id' => 'required',
             'description' => 'required'
 

@@ -1,5 +1,5 @@
 <div class="page-wrap">
-    <div class="app-sidebar colored">
+    <div class="app-sidebar text" style="background-color:#87CEEB " >
         <div class="sidebar-header">
             <a class="header-brand" href="{{ url('/dashboard') }}">
                 <div class="logo-img">
@@ -88,4 +88,4 @@
             </div>
         </div>
     </div>
-</div>
+

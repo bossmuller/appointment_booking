@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="row ">
             <div class="col-lg-8">
-                <div class="page-header-title">
+                <div class="page-header-title" style="color: #00a7e2">
                     <i class="ik ik-inbox bg-blue"></i>
                     <div class="d-inline">
                         <h5>Departments</h5>
@@ -31,7 +31,7 @@
 
 
     <div class="row justify-content-center">
-        <div class="col-md-8 ">
+        <div class="col-md-8 " style="color: #00a7e2">
             @if (Session::has('message'))
                 <div class="alert bg-success alert-success text-white" role="alert">
                     {{ Session::get('message') }}
@@ -39,15 +39,16 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h3>All Departments</h3>
+                    <h3 style="color: #00a7e2">All Departments</h3>
 
                 </div>
                 <div class="card-body">
-                    <table id="data_table" class="table">
+                    <table id="data_table" class="table" style="color: #00a7e2">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+
 
                                 <th class="nosort">&nbsp;</th>
                                 <th class="nosort">&nbsp;</th>
